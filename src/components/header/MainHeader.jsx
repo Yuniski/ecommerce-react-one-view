@@ -4,6 +4,7 @@ import MenuIcon from "@/components/icons/MenuIcon";
 import CartIcon from "@/components/icons/CartIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
 import { useState } from "react";
+import NavLinkHeader from "@/components/header/NavLinkHeader";
 
 const MainHeader = () => {
   const [navClass, setNavClass] = useState("hidden h-full gap-y-[21px] font-bold md:flex md:flex-row p-8 md:mr-auto md:gap-4 md:static w-4/5 md:p-0 md:h-auto");
@@ -20,8 +21,9 @@ const MainHeader = () => {
   };
 
   return (
+    <>
     <header
-      className="flex container items-center mx-auto px-4 gap-4
+      className="flex container items-center mx-auto gap-4 
     "
     >
       <button className="md:hidden" onClick={handleOpenMenu}>
@@ -36,11 +38,11 @@ const MainHeader = () => {
         <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
           <CloseIcon />
         </button>
-        <a href="#">Collections</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <NavLinkHeader text="Collections" />
+        <NavLinkHeader text="Men" />
+        <NavLinkHeader text="Women" />
+        <NavLinkHeader text="About" />
+        <NavLinkHeader text="Contact" />
       </nav>
       <div className="flex gap-4">
         <button>
@@ -49,6 +51,10 @@ const MainHeader = () => {
         <img src={AvatarImage} alt="" className="w-10" />
       </div>
     </header>
+
+    <span className="container mx-auto hidden h-[0.5px] w-full bg-gray-500 md:block"></span>
+    </>
+
   );
 };
 
