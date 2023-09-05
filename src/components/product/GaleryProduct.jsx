@@ -27,7 +27,7 @@ export default () => {
   return (
     <section className="grid md:grid-cols-4 md:gap-4 ">
       <div className="col-span-4 relative">
-        <img src={ARRAY_IMG[index]} alt="" className="aspect-[16/12]" />
+        <img src={ARRAY_IMG[index]} alt="" className="aspect-[16/12] w-full" />
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full flex justify-between px-4">
           <button
             className="bg-white-primary w-10 h-10 rounded-full grid place-items-center"
