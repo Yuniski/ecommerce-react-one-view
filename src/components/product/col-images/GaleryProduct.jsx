@@ -18,7 +18,7 @@ export default ({ ARRAY_IMG = [], ARRAY_IMG_SMALL = [] }) => {
         <img
           src={ARRAY_IMG[index]}
           alt=""
-          className="aspect-[16/12] w-full md:aspect-[16/18] md:rounded-md"
+          className="aspect-[16/13] w-full object-cover md:aspect-[16/18] md:cursor-pointer md:rounded-md xl:aspect-[16/16] 2xl:max-h-[500px]"
         />
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full flex justify-between px-4">
           <button
